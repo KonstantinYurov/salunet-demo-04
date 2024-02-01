@@ -1,0 +1,743 @@
+@charset "UTF-8";
+
+/*-----------------------------Обнуляющие стили START-----------------------------*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+/* делает теги nav, footer, header. aside - блочными */
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+/* ниже параметры, которые уравнивают поведение шрифтов в этих тегах nav, footer, header. aside для разных браузеров, например, запрещают увеличение шрифтов на айфонах */
+
+html,
+body {
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* здесь обращаемся к шрифтам в тегам form и просим наследовать их семейство шрифта, так как по умолчанию они его не наследуют  */
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+/* здесь так же чистим стили в некоторых тегах, лишние отступы и т.д */
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*-----------------------------Обнуляющие стили END-----------------------------*/
+
+/*-----------------------------Подключение Google шрифтов START-----------------------------*/
+
+/*-----------------------------Подключение Google шрифтов END-----------------------------*/
+
+/*-----------------------------Подключение шрифтов локально START-----------------------------*/
+
+@font-face {
+    font-family: "Rubik-light";
+  src: url("../fonts/Rubik-light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+    font-family: "Rubik-LightItalic";
+  src: url("../fonts/Rubik-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+    font-family: "Rubik-Regular";
+  src: url("../fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+    font-family: "Rubik-Italic";
+  src: url("../fonts/Rubik-Italic.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+    font-family: "Rubik-Medium";
+  src: url("../fonts/Rubik-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+    font-family: "Rubik-MediumItalic";
+  src: url("../fonts/Rubik-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+    font-family: "Rubik-SemiBold";
+  src: url("../fonts/Rubik-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+    font-family: "Rubik-SemiBoldItalic";
+  src: url("../fonts/Rubik-SemiBoldItalic.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+    font-family: "Rubik-Bold";
+  src: url("../fonts/Rubik-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+    font-family: "Rubik-BoldItalic";
+  src: url("../fonts/Rubik-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+    font-family: "Rubik-ExtraBold";
+  src: url("../fonts/Rubik-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+    font-family: "Rubik-ExtraBoldItalic";
+  src: url("../fonts/Rubik-ExtraBoldItalic.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+    font-family: "Rubik-Black";
+  src: url("../fonts/Rubik-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+@font-face {
+    font-family: "Rubik-BlackItalic";
+  src: url("../fonts/Rubik-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/*-----------------------------Подключение шрифтов локально END-----------------------------*/
+
+/*-----------------------------Переменные START-----------------------------*/
+
+/*-----------------------------Переменные END-----------------------------*/
+
+/*-----------------------------Подключение иконочного шрифта START-----------------------------*/
+
+@font-face {
+    font-family: "icons";
+  src: url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^=icon-]::after,
+[class*=" icon-"]::after {
+    font-family: "icons" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bottom-arrow:after {
+    content: "\e900";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-close:after {
+    content: "\e901";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-done:after {
+    content: "\e902";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-favorite:after {
+    content: "\e903";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-left-arrow:after {
+    content: "\e904";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-menu:after {
+    content: "\e905";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-right-arrow:after {
+    content: "\e906";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-search:after {
+    content: "\e907";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-sort:after {
+    content: "\e908";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-start:after {
+    content: "\e909";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-thumb-up:after {
+    content: "\e910";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-timer:after {
+    content: "\e911";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-top-arrow:after {
+    content: "\e912";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-visibility:after {
+    content: "\e913";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-bank:after {
+    content: "\e914";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-lightning:after {
+    content: "\e915";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-chart:after {
+    content: "\e917";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-sell:after {
+    content: "\e918";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-swipe-left:after {
+    content: "\e919";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-swipe-right:after {
+    content: "\e920";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-refresh:after {
+    content: "\e921";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-share:after {
+    content: "\e922";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-notification:after {
+    content: "\e923";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-filter-alt:after {
+    content: "\e924";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-settings:after {
+    content: "\e925";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-plus:after {
+    content: "\e926";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-arrow-back:after {
+    content: "\e927";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-arrow-long-forward:after {
+    content: "\e928";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-sn-arrow-top:after {
+    content: "\e800";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-sn-arrow-right:after {
+    content: "\e801";
+    font-size: 18px;
+    color: #121212;
+}
+
+.icon-down-right-arrow:after {
+    content: "\e802";
+    font-size: 18px;
+    color: #121212;
+}
+
+/*-----------------------------Подключение иконочного шрифта END-----------------------------*/
+
+a {
+    color: #4A4AF3;
+}
+
+a:hover {
+    color: #75c1ff;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0px auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+}
+
+.aci {
+    width: 100%;
+    overflow: hidden;
+}
+
+.aci img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.acv {
+    width: 100%;
+    overflow: hidden;
+}
+
+.acv video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.wrapper {
+    padding: 20px 0 0;
+    width: 100%;
+    height: 100%;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0px auto;
+    padding: 0 80px;
+}
+
+.text-light {
+    font-family: Rubik-light;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text {
+    font-family: Rubik-Regular;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text-italic {
+    font-family: Rubik-Italic;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text-italic-light {
+    font-family: Rubik-LightItalic;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text-medium {
+    font-family: Rubik-Medium;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text-semibold {
+    font-family: Rubik-SemiBold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text-bold {
+    font-family: Rubik-Bold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text-super {
+    font-family: Rubik-ExtraBold;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.text-black {
+    font-family: Rubik-Black;
+    font-size: 18px;
+    line-height: 150%;
+    color: #121212;
+    font-variant-numeric: lining-nums;
+}
+
+.header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #FFFF99;
+    z-index: 10;
+}
+
+.header__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.logo__wrapper {
+    max-width: 50px;
+    padding: 5px 0;
+    margin: 0 40px 0 0;
+}
+
+.menu {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    max-width: 750px;
+}
+
+.menu__wrapper {
+    margin: 20px 0 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+}
+
+.menu__container {
+    max-width: 750px;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 0 0 25px;
+}
+
+.menu__container ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.menu__container li {
+    cursor: pointer;
+}
+
+.menu__container li a {
+    color: #121212;
+}
+
+.burger {
+    display: none;
+}
+
+.burger__container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.icon-burger-menu {
+    text-align: end;
+}
+
+.icon-burger-menu img {
+    width: 25px;
+}
+
+.menu-mob__title {
+    display: none;
+}
+
+.menu-mob__title-wrapper {
+    width: 100%;
+}
+
+.menu-mob__title-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+}
+
+.menu-mob__close {
+    margin: 0 0 0 90%;
+}
+
+.menu-mob__close .icon-close {
+    cursor: pointer;
+}
+
+.menu-mob__close .icon-close:after {
+    font-size: 30px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-light {
+        font-size: 16px;
+    }
+
+    .text-semibold {
+        font-size: 16px;
+    }
+
+    .menu {
+        -webkit-flex: none;
+        -ms-flex: none;
+        flex: none;
+    }
+
+    .menu__wrapper {
+        margin: 0;
+    }
+
+    .menu__container {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: -100%;
+        -webkit-transition: right 0.3s ease-out;
+        transition: right 0.3s ease-out;
+        background-color: #FFFF99;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        z-index: 1;
+    }
+
+    .menu__container ul {
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .menu__container li {
+        font-size: 18px;
+        margin: 0 0 20px 0;
+    }
+
+    .menu__container--active {
+        right: 0;
+        -webkit-transition: right 0.3s ease-out;
+        transition: right 0.3s ease-out;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .menu-mob__title {
+        display: block;
+        margin: 15px 0 0;
+        padding: 0 20px 0 20px;
+    }
+
+    .menu-mob__close .icon-close:after {
+        font-size: 28px;
+    }
+}
+
+@media (any-hover: hover) {
+    .menu__container li a:hover {
+        opacity: 0.7;
+    }
+}
